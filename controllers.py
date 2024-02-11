@@ -1,5 +1,5 @@
 from flask import jsonify, request
-from models import User, db
+from models import *
 from sqlalchemy.exc import IntegrityError
 
 
