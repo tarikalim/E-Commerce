@@ -4,7 +4,7 @@ from models import db
 import routes
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://tarik@34.141.227.97/E-Commerce'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://'
 db.init_app(app)
 routes.init_routes(app)
 
