@@ -12,17 +12,17 @@ def init_app_routes(app):
                             Address=data.get('address'))
             db.session.add(new_user)
             db.session.commit()
-            return jsonify({"message": "Kullanıcı başarıyla kaydedildi"}), 201
+            return jsonify({"message": "Register ok"}), 201
 
         except IntegrityError:
             db.session.rollback()
-            return jsonify({"message": "Bu kullanıcı adı zaten var"}), 400
+            return jsonify({"message": "Invalid username"}), 400
 
     @app.route('/login', methods=['POST'])
     def login():
         data = request.get_json()
         user = User.query.filter_by(Username=data['username']).first()
         if user and user.Password == data['password']:
-            return jsonify({"message": "Başarılı giriş", "user_id": user.UserID}), 200
+            return jsonify({"message": "Login ok", "user_id": user.UserID}), 200
         else:
-            return jsonify({"message": "Geçersiz kullanıcı adı veya şifre"}), 401
+            return jsonify({"message": "Invalid"}), 401
