@@ -1,4 +1,3 @@
-# models.py
 from sqlalchemy import Enum
 import enum
 from flask_sqlalchemy import SQLAlchemy
