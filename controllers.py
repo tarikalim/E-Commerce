@@ -1,5 +1,5 @@
 # controllers.py
-from models import User, db
+from models import *
 from sqlalchemy.exc import IntegrityError
 from flask import jsonify, request
 
@@ -24,3 +24,9 @@ def login_user():
         return jsonify({"message": "Login ok", "user_id": user.UserID}), 200
     else:
         return jsonify({"message": "Invalid username or password"}), 401
+
+
+def get_products():
+    products = Product.query.all()
+    products_list = [product.to_dict() for product in products]
+    return jsonify(products_list), 200

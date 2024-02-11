@@ -30,6 +30,17 @@ class Product(db.Model):
     orderdetails = db.relationship('OrderDetail', back_populates='product')
     reviews = db.relationship('Review', back_populates='product')
 
+    def to_dict(self):
+        return {
+            'product_id': self.ProductID,
+            'name': self.Name,
+            'price': str(self.Price),
+            'stock_quantity': self.StockQuantity,
+            'description': self.Description,
+            'category_id': self.CategoryID,
+
+        }
+
 
 class User(db.Model):
     __tablename__ = 'Users'

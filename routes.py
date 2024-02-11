@@ -10,3 +10,6 @@ def init_routes(app):
     def login():
         return controllers.login_user()
 
+    @app.route('/products', methods=['GET'])
+    def see_products():
+        return controllers.get_products()
