@@ -1,7 +1,9 @@
-# controllers.py
-from models import *
-from sqlalchemy.exc import IntegrityError
+import datetime
+import jwt
 from flask import jsonify, request
+from sqlalchemy.exc import IntegrityError
+from creates_app import creates_app
+from models import *
 
 
 def register_user():
@@ -20,8 +22,15 @@ def register_user():
 def login_user():
     data = request.get_json()
     user = User.query.filter_by(Username=data['username']).first()
+
     if user and user.Password == data['password']:
-        return jsonify({"message": "Login ok", "user_id": user.UserID}), 200
+        token = jwt.encode({
+            'user_id': user.UserID,
+            'exp': datetime.datetime.utcnow() + datetime.timedelta(hours=1)
+        }, creates_app().config['SECRET_KEY'])
+
+        return jsonify({'token': token}), 200
+
     else:
         return jsonify({"message": "Invalid username or password"}), 401
 
