@@ -35,6 +35,17 @@ def login_user():
         return jsonify({"message": "Invalid username or password"}), 401
 
 
+def get_user_info(current_user, user_id):
+    if current_user.UserID != user_id:
+        return jsonify({'message': 'login to system'}), 403
+
+    user = User.query.get(user_id)
+    if not user:
+        return jsonify({'message': 'No user'}), 404
+
+    user_data = {'username': user.Username, 'email': user.Email, 'address': user.Address}
+    return jsonify(user_data), 200
+
 def get_products():
     products = Product.query.all()
     products_list = [product.to_dict() for product in products]
