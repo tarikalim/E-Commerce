@@ -46,7 +46,31 @@ def get_user_info(current_user, user_id):
     user_data = {'username': user.Username, 'email': user.Email, 'address': user.Address}
     return jsonify(user_data), 200
 
+
+def add_review(current_user, product_id):
+    data = request.get_json()
+    comment = data['comment']
+    rating = data['rating']
+
+    order = Order.query.join(OrderDetail).filter(Order.UserID == current_user.UserID,
+                                                 OrderDetail.ProductID == product_id).first()
+    if not order:
+        return jsonify({'message': 'Not purchased'}), 403
+
+    new_review = Review(UserID=current_user.UserID, ProductID=product_id,
+                        Date=datetime.datetime.utcnow(), Comment=comment, Rate=rating)
+    db.session.add(new_review)
+    db.session.commit()
+    return jsonify({'message': 'Review added'}), 201
+
+
 def get_products():
     products = Product.query.all()
+    products_list = [product.to_dict() for product in products]
+    return jsonify(products_list), 200
+
+
+def get_products_by_category(category_name):
+    products = Product.query.join(Category).filter(Category.CategoryName == category_name).all()
     products_list = [product.to_dict() for product in products]
     return jsonify(products_list), 200
