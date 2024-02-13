@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8657bc40-455b-4e5c-b651-cf79ebb245c5" name="Changes" comment=".">
+    <list default="true" id="8657bc40-455b-4e5c-b651-cf79ebb245c5" name="Changes" comment="user info endpoint">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers.py" beforeDir="false" afterPath="$PROJECT_DIR$/controllers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/creates_app.py" beforeDir="false" afterPath="$PROJECT_DIR$/creates_app.py" afterDir="false" />
@@ -39,6 +39,9 @@
       </UrlAndAccount>
     </option>
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
 }</component>
@@ -54,6 +57,7 @@
   &quot;keyToString&quot;: {
     &quot;Python.app.executor&quot;: &quot;Run&quot;,
     &quot;Python.controllers.executor&quot;: &quot;Run&quot;,
+    &quot;Python.models.executor&quot;: &quot;Run&quot;,
     &quot;Python.routes.executor&quot;: &quot;Run&quot;,
     &quot;Python.test.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
@@ -166,7 +170,31 @@
       <option name="project" value="LOCAL" />
       <updated>1707818798354</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="user info endpoint">
+      <option name="closed" value="true" />
+      <created>1707821763883</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1707821763883</updated>
+    </task>
+    <task id="LOCAL-00013" summary="user info endpoint">
+      <option name="closed" value="true" />
+      <created>1707821786636</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1707821786636</updated>
+    </task>
+    <task id="LOCAL-00014" summary="user info endpoint">
+      <option name="closed" value="true" />
+      <created>1707821853471</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1707821853471</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -176,6 +204,7 @@
     <MESSAGE value="for buyer, product endpoint to see products." />
     <MESSAGE value="The token system has been added and the relevant endpoints have been updated to work with the token system." />
     <MESSAGE value="." />
-    <option name="LAST_COMMIT_MESSAGE" value="." />
+    <MESSAGE value="user info endpoint" />
+    <option name="LAST_COMMIT_MESSAGE" value="user info endpoint" />
   </component>
 </project>
