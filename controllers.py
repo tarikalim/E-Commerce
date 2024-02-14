@@ -37,7 +37,7 @@ def login_user():
 
 def get_user_info(current_user, user_id):
     if current_user.UserID != user_id:
-        return jsonify({'message': 'login to system'}), 403
+        return jsonify({'message': 'No authorization'}), 403
 
     user = User.query.get(user_id)
     if not user:
@@ -45,6 +45,27 @@ def get_user_info(current_user, user_id):
 
     user_data = {'username': user.Username, 'email': user.Email, 'address': user.Address}
     return jsonify(user_data), 200
+
+
+def update_user(current_user):
+    data = request.get_json()
+    user = User.query.filter_by(UserID=current_user.UserID).first()
+
+    if not user:
+        return jsonify({'message': 'User not found'}), 404
+
+    if 'username' in data:
+        user.Username = data['username']
+    if 'email' in data:
+        user.Email = data['email']
+    if 'address' in data:
+        user.Address = data['address']
+    if 'creditcardID' in data:
+        user.CreditCardID = data['creditcardID']
+
+    db.session.commit()
+
+    return jsonify({'message': 'User updated successfully'}), 200
 
 
 def add_review(current_user, product_id):
