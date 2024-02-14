@@ -119,3 +119,9 @@ class Review(db.Model):
     # Relationships
     user = db.relationship('User', back_populates='reviews')
     product = db.relationship('Product', back_populates='reviews')
+
+
+class Admin(db.Model):
+    __tablename__ = 'Admins'
+    AdminID = db.Column(db.Integer, primary_key=True)
+    Password = db.Column(db.String(200), nullable=False)
