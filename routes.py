@@ -1,5 +1,6 @@
 import controllers
-from middleware import token_required
+import admin_controller
+from middleware import *
 
 
 def init_routes(app):
@@ -7,17 +8,17 @@ def init_routes(app):
     def register():
         return controllers.register_user()
 
-    @app.route('/login', methods=['POST'])
+    @app.route('/user_login', methods=['POST'])
     def login():
         return controllers.login_user()
 
     @app.route('/user/<int:user_id>', methods=['GET'])
-    @token_required
+    @user_token_required
     def see_user_info(current_user, user_id):
         return controllers.get_user_info(current_user, user_id)
 
     @app.route('/update_user', methods=['PUT'])
-    @token_required
+    @user_token_required
     def update_user(current_user):
         return controllers.update_user(current_user)
 
@@ -30,6 +31,10 @@ def init_routes(app):
         return controllers.get_products_by_category(category_name)
 
     @app.route('/add_review/<int:product_id>', methods=['POST'])
-    @token_required
+    @user_token_required
     def add_review_to_product(current_user, product_id):
         return controllers.add_review(current_user, product_id)
+
+    @app.route('/admin_login', methods=['POST'])
+    def admin_login():
+        return admin_controller.login_admin()
