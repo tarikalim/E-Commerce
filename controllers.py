@@ -95,3 +95,41 @@ def get_products_by_category(category_name):
     products = Product.query.join(Category).filter(Category.CategoryName == category_name).all()
     products_list = [product.to_dict() for product in products]
     return jsonify(products_list), 200
+
+
+def add_to_cart(current_user, product_id, quantity):
+    cart = Cart.query.filter_by(UserID=current_user.UserID).first()
+
+    if not cart:
+        cart = Cart(UserID=current_user.UserID)
+        db.session.add(cart)
+        db.session.commit()
+
+    cart_detail = CartDetail.query.filter_by(CartID=cart.CartID, ProductID=product_id).first()
+    if cart_detail:
+        cart_detail.Quantity += quantity
+    else:
+        new_cart_detail = CartDetail(CartID=cart.CartID, ProductID=product_id, Quantity=quantity)
+        db.session.add(new_cart_detail)
+
+    db.session.commit()
+    return jsonify({"message": "Product added to cart"}), 200
+
+
+def view_cart_details(current_user):
+    cart = Cart.query.filter_by(UserID=current_user.UserID).first()
+
+    if not cart:
+        return jsonify({'message': 'Cart not found'}), 404
+
+    cart_details = CartDetail.query.filter_by(CartID=cart.CartID).all()
+
+    cart_items = []
+    for detail in cart_details:
+        product = Product.query.get(detail.ProductID)
+        if product:
+            item = product.to_dict()
+            item['quantity'] = detail.Quantity
+            cart_items.append(item)
+
+    return jsonify({'cart_items': cart_items}), 200
