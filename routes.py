@@ -35,6 +35,16 @@ def init_routes(app):
     def add_review_to_product(current_user, product_id):
         return controllers.add_review(current_user, product_id)
 
+    @app.route('/add_to_cart/<int:product_id>/<int:quantity>', methods=['POST'])
+    @user_token_required
+    def add_product_to_cart(current_user, product_id, quantity):
+        return controllers.add_to_cart(current_user, product_id, quantity)
+
+    @app.route('/view_cart', methods=['GET'])
+    @user_token_required
+    def get_cart_details(current_user):
+        return controllers.view_cart_details(current_user)
+
     @app.route('/admin_login', methods=['POST'])
     def admin_login():
         return admin_controller.login_admin()
