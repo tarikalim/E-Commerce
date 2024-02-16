@@ -3,7 +3,7 @@ import jwt
 from flask import jsonify, request
 from sqlalchemy.exc import IntegrityError
 from creates_app import creates_app
-from models import *
+from Model.models import *
 
 
 def register_user():

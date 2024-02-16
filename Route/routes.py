@@ -1,6 +1,5 @@
-import controllers
-import admin_controller
-from middleware import *
+from Control import admin_controller, controllers
+from Middlewares.middleware import *
 
 
 def init_routes(app):

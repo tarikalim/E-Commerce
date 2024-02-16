@@ -4,11 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8657bc40-455b-4e5c-b651-cf79ebb245c5" name="Changes" comment="user info endpoint">
+    <list default="true" id="8657bc40-455b-4e5c-b651-cf79ebb245c5" name="Changes" comment="related endpoints.">
+      <change afterPath="$PROJECT_DIR$/Control/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Middlewares/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Model/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Route/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers.py" beforeDir="false" afterPath="$PROJECT_DIR$/controllers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/Control/admin_controller.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers.py" beforeDir="false" afterPath="$PROJECT_DIR$/Control/controllers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/creates_app.py" beforeDir="false" afterPath="$PROJECT_DIR$/creates_app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/routes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/middleware.py" beforeDir="false" afterPath="$PROJECT_DIR$/Middlewares/middleware.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Model/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/Route/routes.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +32,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -57,6 +66,8 @@
   &quot;keyToString&quot;: {
     &quot;Python.app.executor&quot;: &quot;Run&quot;,
     &quot;Python.controllers.executor&quot;: &quot;Run&quot;,
+    &quot;Python.creates_app.executor&quot;: &quot;Run&quot;,
+    &quot;Python.deneme.executor&quot;: &quot;Run&quot;,
     &quot;Python.models.executor&quot;: &quot;Run&quot;,
     &quot;Python.routes.executor&quot;: &quot;Run&quot;,
     &quot;Python.test.executor&quot;: &quot;Run&quot;,
@@ -66,6 +77,44 @@
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Tarik\PycharmProjects\E-Commerce\Route" />
+      <recent name="C:\Users\Tarik\PycharmProjects\E-Commerce\Middlewares" />
+      <recent name="C:\Users\Tarik\PycharmProjects\E-Commerce\Model" />
+      <recent name="C:\Users\Tarik\PycharmProjects\E-Commerce\Control" />
+      <recent name="C:\Users\Tarik\PycharmProjects\E-Commerce" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="app" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="E-Commerce" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/app.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.app" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -194,7 +243,71 @@
       <option name="project" value="LOCAL" />
       <updated>1707821853471</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="review and filter by category endpoints added and tested.">
+      <option name="closed" value="true" />
+      <created>1707851350738</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1707851350738</updated>
+    </task>
+    <task id="LOCAL-00016" summary=".">
+      <option name="closed" value="true" />
+      <created>1707851358421</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1707851358421</updated>
+    </task>
+    <task id="LOCAL-00017" summary="extra endpoint. users can update their info's.">
+      <option name="closed" value="true" />
+      <created>1707920588761</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1707920588761</updated>
+    </task>
+    <task id="LOCAL-00018" summary="admin table added">
+      <option name="closed" value="true" />
+      <created>1707955181907</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1707955181907</updated>
+    </task>
+    <task id="LOCAL-00019" summary="admin token function added">
+      <option name="closed" value="true" />
+      <created>1707955244667</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1707955244667</updated>
+    </task>
+    <task id="LOCAL-00020" summary="admin login function and related endpoint added and tested">
+      <option name="closed" value="true" />
+      <created>1707955304766</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1707955304766</updated>
+    </task>
+    <task id="LOCAL-00021" summary="create cart, add product to cart. view cart details.">
+      <option name="closed" value="true" />
+      <created>1708029333741</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1708029333741</updated>
+    </task>
+    <task id="LOCAL-00022" summary="related endpoints.">
+      <option name="closed" value="true" />
+      <created>1708029353095</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1708029353095</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -203,8 +316,15 @@
     <MESSAGE value="some fixes." />
     <MESSAGE value="for buyer, product endpoint to see products." />
     <MESSAGE value="The token system has been added and the relevant endpoints have been updated to work with the token system." />
-    <MESSAGE value="." />
     <MESSAGE value="user info endpoint" />
-    <option name="LAST_COMMIT_MESSAGE" value="user info endpoint" />
+    <MESSAGE value="review and filter by category endpoints added and tested." />
+    <MESSAGE value="." />
+    <MESSAGE value="extra endpoint. users can update their info's." />
+    <MESSAGE value="admin table added" />
+    <MESSAGE value="admin token function added" />
+    <MESSAGE value="admin login function and related endpoint added and tested" />
+    <MESSAGE value="create cart, add product to cart. view cart details." />
+    <MESSAGE value="related endpoints." />
+    <option name="LAST_COMMIT_MESSAGE" value="related endpoints." />
   </component>
 </project>

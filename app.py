@@ -1,6 +1,6 @@
 from creates_app import creates_app
-from models import db
-import routes
+from Model.models import db
+from Route import routes
 
 app = creates_app()
 routes.init_routes(app)
