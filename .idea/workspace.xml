@@ -4,19 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8657bc40-455b-4e5c-b651-cf79ebb245c5" name="Changes" comment="related endpoints.">
-      <change afterPath="$PROJECT_DIR$/Control/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Middlewares/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Model/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Route/__init__.py" afterDir="false" />
+    <list default="true" id="8657bc40-455b-4e5c-b651-cf79ebb245c5" name="Changes" comment="stock check for adding product to chart functionallity.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/Control/admin_controller.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers.py" beforeDir="false" afterPath="$PROJECT_DIR$/Control/controllers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Control/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Control/admin_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/admin_controller.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Control/controllers.py" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/controllers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Middlewares/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Route/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Route/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/Route/routes.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/creates_app.py" beforeDir="false" afterPath="$PROJECT_DIR$/creates_app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/middleware.py" beforeDir="false" afterPath="$PROJECT_DIR$/Middlewares/middleware.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Model/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/Route/routes.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,9 +77,9 @@
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Tarik\PycharmProjects\E-Commerce\Route" />
-      <recent name="C:\Users\Tarik\PycharmProjects\E-Commerce\Middlewares" />
       <recent name="C:\Users\Tarik\PycharmProjects\E-Commerce\Model" />
-      <recent name="C:\Users\Tarik\PycharmProjects\E-Commerce\Control" />
+      <recent name="C:\Users\Tarik\PycharmProjects\E-Commerce\Middlewares" />
+      <recent name="C:\Users\Tarik\PycharmProjects\E-Commerce\Controller" />
       <recent name="C:\Users\Tarik\PycharmProjects\E-Commerce" />
     </key>
   </component>
@@ -307,7 +304,23 @@
       <option name="project" value="LOCAL" />
       <updated>1708029353095</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="modules update for all files.">
+      <option name="closed" value="true" />
+      <created>1708092322361</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1708092322361</updated>
+    </task>
+    <task id="LOCAL-00024" summary="stock check for adding product to chart functionallity.">
+      <option name="closed" value="true" />
+      <created>1708098024863</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1708098024863</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -325,6 +338,8 @@
     <MESSAGE value="admin login function and related endpoint added and tested" />
     <MESSAGE value="create cart, add product to cart. view cart details." />
     <MESSAGE value="related endpoints." />
-    <option name="LAST_COMMIT_MESSAGE" value="related endpoints." />
+    <MESSAGE value="modules update for all files." />
+    <MESSAGE value="stock check for adding product to chart functionallity." />
+    <option name="LAST_COMMIT_MESSAGE" value="stock check for adding product to chart functionallity." />
   </component>
 </project>

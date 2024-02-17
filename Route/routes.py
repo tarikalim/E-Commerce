@@ -1,4 +1,4 @@
-from Control import admin_controller, controllers
+from Controller import admin_controller, controllers
 from Middlewares.middleware import *
 
 
