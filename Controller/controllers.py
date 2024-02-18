@@ -35,15 +35,8 @@ def login_user():
         return jsonify({"message": "Invalid username or password"}), 401
 
 
-def get_user_info(current_user, user_id):
-    if current_user.UserID != user_id:
-        return jsonify({'message': 'No authorization'}), 403
-
-    user = User.query.get(user_id)
-    if not user:
-        return jsonify({'message': 'No user'}), 404
-
-    user_data = {'username': user.Username, 'email': user.Email, 'address': user.Address}
+def get_user_info(current_user):
+    user_data = {'username': current_user.Username, 'email': current_user.Email, 'address': current_user.Address}
     return jsonify(user_data), 200
 
 

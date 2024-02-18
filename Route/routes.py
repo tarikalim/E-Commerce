@@ -11,10 +11,10 @@ def init_routes(app):
     def login():
         return controllers.login_user()
 
-    @app.route('/user/<int:user_id>', methods=['GET'])
+    @app.route('/user', methods=['GET'])
     @user_token_required
-    def see_user_info(current_user, user_id):
-        return controllers.get_user_info(current_user, user_id)
+    def see_user_info(current_user):
+        return controllers.get_user_info(current_user)
 
     @app.route('/update_user', methods=['PUT'])
     @user_token_required
