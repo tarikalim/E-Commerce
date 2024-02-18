@@ -84,6 +84,12 @@ def get_products():
     return jsonify(products_list), 200
 
 
+def get_categories():
+    categories = Category.query.all()
+    categories_list = [{'id': category.CategoryID, 'name': category.CategoryName} for category in categories]
+    return jsonify(categories_list)
+
+
 def get_products_by_category(category_name):
     products = Product.query.join(Category).filter(Category.CategoryName == category_name).all()
     products_list = [product.to_dict() for product in products]
