@@ -25,6 +25,10 @@ def init_routes(app):
     def see_products():
         return controllers.get_products()
 
+    @app.route('/categories', methods=['GET'])
+    def get_categories():
+        return controllers.get_categories()
+
     @app.route('/products/category/<string:category_name>', methods=['GET'])
     def get_products_by_category(category_name):
         return controllers.get_products_by_category(category_name)
