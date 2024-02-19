@@ -5,13 +5,15 @@ from sqlalchemy.exc import IntegrityError
 from creates_app import creates_app
 from Model.models import *
 from datetime import date
+from werkzeug.security import generate_password_hash, check_password_hash
 
 
 def register_user():
     try:
         data = request.get_json()
-        new_user = User(Username=data['username'], Password=data['password'], Email=data.get('email'),
-                        Address=data.get('address'))
+        hashed_password = generate_password_hash(data['password'])
+        new_user = User(Username=data['username'], Password=hashed_password,
+                        Email=data.get('email'), Address=data.get('address'))
         db.session.add(new_user)
         db.session.commit()
         return jsonify({"message": "Register ok"}), 201
@@ -24,7 +26,7 @@ def login_user():
     data = request.get_json()
     user = User.query.filter_by(Username=data['username']).first()
 
-    if user and user.Password == data['password']:
+    if user and check_password_hash(user.Password, data['password']):
         token = jwt.encode({
             'user_id': user.UserID,
             'exp': datetime.datetime.utcnow() + datetime.timedelta(hours=1)
