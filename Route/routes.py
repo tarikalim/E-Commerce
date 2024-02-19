@@ -48,6 +48,11 @@ def init_routes(app):
     def get_cart_details(current_user):
         return controllers.view_cart_details(current_user)
 
+    @app.route('/create_order', methods=['POST'])
+    @user_token_required
+    def create_order(current_user):
+        return controllers.create_order(current_user)
+
     @app.route('/admin_login', methods=['POST'])
     def admin_login():
         return admin_controller.login_admin()
