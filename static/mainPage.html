@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Main Page</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+        }
+        #productsList {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            max-width: 1000px;
+            margin: 20px;
+        }
+        .product {
+            background: #fff;
+            padding: 1em;
+            margin: 1em;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+            text-align: center;
+            width: 200px;
+        }
+        #categorySelect {
+            margin: 20px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        .cart-button:hover {
+            background-color: #286090;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Our Product Page</h1>
+    <select id="categorySelect">
+        <option value="">All Categories</option>
+
+    </select>
+    <div id="productsList"></div>
+        <button class="cart-button" onclick="window.location.href='/static/cart.html'">View Cart</button>
+
+
+    <script>
+        const token = localStorage.getItem('token');
+        if (!token) {
+            window.location.href = '/static/login.html';
+        }
+
+         fetch('/categories')
+        .then(response => response.json())
+        .then(categories => {
+            const select = document.getElementById('categorySelect');
+            categories.forEach(category => {
+                const option = document.createElement('option');
+                option.value = category.name;
+                option.textContent = category.name;
+                select.appendChild(option);
+            });
+        })
+        .catch(error => console.error('Error:', error));
+
+
+        function fetchProducts(category = '') {
+            let url = category ? '/products/category/' + category : '/products';
+            fetch(url)
+                .then(response => response.json())
+                .then(products => {
+                    const productsList = document.getElementById('productsList');
+                    productsList.innerHTML = '';
+                    products.forEach(product => {
+                        const productDiv = document.createElement('div');
+                        productDiv.className = 'product';
+                        productDiv.innerHTML = `
+                            <h2>${product.name}</h2>
+                            <p>${product.description}</p>
+                            <button onclick="addToCart(${product.product_id})">+</button>`;
+                        productsList.appendChild(productDiv);
+                    });
+                })
+                .catch(error => console.error('Error:', error));
+        }
+
+        function addToCart(productId) {
+            fetch('/add_to_cart/' + productId + '/1', {
+                method: 'POST',
+                headers: {
+                    'Authorization': 'Bearer ' + token
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                alert('Product added to cart!');
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        }
+
+        document.getElementById('categorySelect').addEventListener('change', function(event) {
+            fetchProducts(event.target.value);
+        });
+
+        fetchProducts(); // Initial product list
+    </script>
+</body>
+</html>
