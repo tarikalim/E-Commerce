@@ -53,6 +53,10 @@ def init_routes(app):
     def create_order(current_user):
         return controllers.create_order(current_user)
 
+    @app.route('/reviews/<int:product_id>', methods=['GET'])
+    def product_reviews(product_id):
+        return controllers.get_reviews_for_product(product_id)
+
     @app.route('/admin_login', methods=['POST'])
     def admin_login():
         return admin_controller.login_admin()
