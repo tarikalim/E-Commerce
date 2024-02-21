@@ -15,7 +15,7 @@ def login_admin():
     if admin and admin.Password == password:
         token = jwt.encode({
             'admin_id': admin.AdminID,
-            'exp': datetime.datetime.utcnow() + datetime.timedelta(hours=1)
+            'exp': datetime.datetime.now(datetime.timezone.utc) + datetime.timedelta(hours=1)
         }, creates_app().config['SECRET_KEY'])
 
         return jsonify({'token': token}), 200
