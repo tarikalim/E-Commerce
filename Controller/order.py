@@ -54,7 +54,7 @@ def get_user_orders(current_user):
             order_data = {
                 'order_id': order.OrderID,
                 'order_date': order.OrderDate.strftime("%Y-%m-%d"),
-                'status': order.Status.name if hasattr(order.Status, 'name') else str(order.Status)
+                'status': encode_enum(order.Status)
             }
             orders_list.append(order_data)
 
