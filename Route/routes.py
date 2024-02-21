@@ -53,6 +53,16 @@ def init_routes(app):
     def create_order(current_user):
         return order.create_order(current_user)
 
+    @app.route('/get_order', methods=['GET'])
+    @user_token_required
+    def get_user_orders(current_user):
+        return order.get_user_orders(current_user)
+
+    @app.route('/get_order_details/<int:order_id>', methods=['GET'])
+    @user_token_required
+    def get_user_order_details(current_user, order_id):
+        return order.get_user_order_details(current_user, order_id)
+
     @app.route('/reviews/<int:product_id>', methods=['GET'])
     def product_reviews(product_id):
         return review.get_reviews_for_product(product_id)
