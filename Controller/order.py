@@ -43,3 +43,52 @@ def create_order(current_user):
     db.session.commit()
 
     return jsonify({'message': 'Order created successfully', 'order_id': new_order.OrderID}), 201
+
+
+def get_user_orders(current_user):
+    try:
+        orders = Order.query.filter_by(UserID=current_user.UserID).all()
+        orders_list = []
+
+        for order in orders:
+            order_data = {
+                'order_id': order.OrderID,
+                'order_date': order.OrderDate.strftime("%Y-%m-%d"),
+                'status': order.Status.name if hasattr(order.Status, 'name') else str(order.Status)
+            }
+            orders_list.append(order_data)
+
+        return jsonify({'orders': orders_list}), 200
+
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+
+
+def get_user_order_details(current_user, order_id):
+    try:
+        order = Order.query.filter_by(OrderID=order_id, UserID=current_user.UserID).first()
+        if not order:
+            return jsonify({'message': 'Order not found or access denied'}), 404
+
+        order_details = OrderDetail.query.filter_by(OrderID=order_id).all()
+        details_list = []
+        total_cost = 0
+
+        for detail in order_details:
+            sale_price = float(detail.SalePrice)
+            quantity = detail.Quantity
+            total_price = sale_price * quantity
+            total_cost += total_price
+
+            detail_data = {
+                'product_id': detail.ProductID,
+                'quantity': quantity,
+                'sale_price': sale_price,
+                'total_price': total_price
+            }
+            details_list.append(detail_data)
+
+        return jsonify({'order_details': details_list, 'total_cost': total_cost}), 200
+
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
