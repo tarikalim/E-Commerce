@@ -1,3 +1,4 @@
+from enum import Enum
 from functools import wraps
 from flask import request, jsonify
 import jwt
@@ -49,3 +50,10 @@ def admin_token_required(f):
         return f(admin, *args, **kwargs)
 
     return decorated
+
+
+def encode_enum(enum_value):
+    if isinstance(enum_value, Enum):
+        return enum_value.name
+    else:
+        return str(enum_value)
