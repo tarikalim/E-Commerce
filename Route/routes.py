@@ -63,6 +63,11 @@ def init_routes(app):
     def get_user_order_details(current_user, order_id):
         return order.get_user_order_details(current_user, order_id)
 
+    @app.route('/cancel_order/<int:order_id>', methods=['PATCH'])
+    @token_required(role='user')
+    def cancel_user_order(current_user, order_id):
+        return order.cancel_user_order(current_user, order_id)
+
     @app.route('/reviews/<int:product_id>', methods=['GET'])
     def product_reviews(product_id):
         return review.get_reviews_for_product(product_id)
