@@ -18,6 +18,9 @@ def register_user():
         if not re.match(email_regex, email):
             return jsonify({'message': 'Invalid email format'}), 400
 
+        if not check_mx_record(email):
+            return jsonify({'message': 'Not valid email domain'}), 400
+
         if User.query.filter_by(Email=email).first():
             return jsonify({'message': 'Email already exists'}), 400
 
@@ -67,6 +70,10 @@ def update_user(current_user):
         email_regex = r'^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$'
         if not re.match(email_regex, data['email']):
             return jsonify({'message': 'Invalid email format'}), 400
+
+        if not check_mx_record(data['email']):
+            return jsonify({'message': 'Email domain is not valid'}), 400
+
         if User.query.filter(User.Email == data['email'], User.UserID != current_user.UserID).first():
             return jsonify({'message': 'Email already exists'}), 400
         user.Email = data['email']
