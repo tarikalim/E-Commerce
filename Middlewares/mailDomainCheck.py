@@ -8,6 +8,3 @@ def check_mx_record(email):
         return True
     except (dns.resolver.NoAnswer, dns.resolver.NXDOMAIN):
         return False
-
-
-
