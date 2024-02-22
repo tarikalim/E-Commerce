@@ -1,5 +1,5 @@
 from Controller import admin, cart, category, order, product, review, user
-from Middlewares.middleware import *
+from Middlewares.auth import *
 
 
 def init_routes(app):
