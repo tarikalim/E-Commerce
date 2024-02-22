@@ -54,8 +54,7 @@ def get_user_orders(current_user):
             order_data = {
                 'order_id': order.OrderID,
                 'order_date': order.OrderDate.strftime("%Y-%m-%d"),
-                'status': encode_enum(order.Status)
-            }
+                'status': order.Status.value}
             orders_list.append(order_data)
 
         return jsonify({'orders': orders_list}), 200
@@ -89,6 +88,23 @@ def get_user_order_details(current_user, order_id):
             details_list.append(detail_data)
 
         return jsonify({'order_details': details_list, 'total_cost': total_cost}), 200
+
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+
+
+def cancel_user_order(current_user, order_id):
+    try:
+        order = Order.query.filter_by(OrderID=order_id, UserID=current_user.UserID).first()
+        if not order:
+            return jsonify({'message': 'Order not found or not authorized to cancel this order'}), 404
+
+        if order.Status == OrderStatus.PLACED:
+            order.Status = OrderStatus.CANCELLED
+            db.session.commit()
+            return jsonify({'message': 'Order cancelled successfully'}), 200
+        else:
+            return jsonify({'message': 'Order cannot be cancelled because order is:' + order.Status.value}), 400
 
     except Exception as e:
         return jsonify({'error': str(e)}), 500
