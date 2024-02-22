@@ -6,5 +6,5 @@ from creates_app import creates_app
 from Model.models import *
 from datetime import date
 from werkzeug.security import generate_password_hash, check_password_hash
-from Middlewares.middleware import encode_enum
+from Middlewares.mailDomainCheck import check_mx_record
 import re
