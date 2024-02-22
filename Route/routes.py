@@ -12,12 +12,12 @@ def init_routes(app):
         return user.login_user()
 
     @app.route('/user', methods=['GET'])
-    @user_token_required
+    @token_required(role='user')
     def see_user_info(current_user):
         return user.get_user_info(current_user)
 
     @app.route('/update_user', methods=['PUT'])
-    @user_token_required
+    @token_required(role='user')
     def update_user(current_user):
         return user.update_user(current_user)
 
@@ -34,32 +34,32 @@ def init_routes(app):
         return product.get_products_by_category(category_name)
 
     @app.route('/add_review/<int:product_id>', methods=['POST'])
-    @user_token_required
+    @token_required(role='user')
     def add_review_to_product(current_user, product_id):
         return review.add_review(current_user, product_id)
 
     @app.route('/add_to_cart/<int:product_id>/<int:quantity>', methods=['POST'])
-    @user_token_required
+    @token_required(role='user')
     def add_product_to_cart(current_user, product_id, quantity):
         return cart.add_to_cart(current_user, product_id, quantity)
 
     @app.route('/view_cart', methods=['GET'])
-    @user_token_required
+    @token_required(role='user')
     def get_cart_details(current_user):
         return cart.view_cart_details(current_user)
 
     @app.route('/create_order', methods=['POST'])
-    @user_token_required
+    @token_required(role='user')
     def create_order(current_user):
         return order.create_order(current_user)
 
     @app.route('/get_order', methods=['GET'])
-    @user_token_required
+    @token_required(role='user')
     def get_user_orders(current_user):
         return order.get_user_orders(current_user)
 
     @app.route('/get_order_details/<int:order_id>', methods=['GET'])
-    @user_token_required
+    @token_required(role='user')
     def get_user_order_details(current_user, order_id):
         return order.get_user_order_details(current_user, order_id)
 
