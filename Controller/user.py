@@ -14,12 +14,9 @@ def register_user():
                 'message': 'Password must be at least 8 characters long and include at least one '
                            'letter and one number'}), 400
 
-        email_regex = r'^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$'
-        if not re.match(email_regex, email):
-            return jsonify({'message': 'Invalid email format'}), 400
-
-        if not check_mx_record(email):
-            return jsonify({'message': 'Not valid email domain'}), 400
+        is_email_valid, email_message = validate_email(email)
+        if not is_email_valid:
+            return jsonify({'message': email_message}), 400
 
         if User.query.filter_by(Email=email).first():
             return jsonify({'message': 'Email already exists'}), 400
@@ -67,12 +64,9 @@ def update_user(current_user):
         user.Username = data['username']
 
     if 'email' in data:
-        email_regex = r'^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$'
-        if not re.match(email_regex, data['email']):
-            return jsonify({'message': 'Invalid email format'}), 400
-
-        if not check_mx_record(data['email']):
-            return jsonify({'message': 'Email domain is not valid'}), 400
+        is_email_valid, email_message = validate_email(data['email'])
+        if not is_email_valid:
+            return jsonify({'message': email_message}), 400
 
         if User.query.filter(User.Email == data['email'], User.UserID != current_user.UserID).first():
             return jsonify({'message': 'Email already exists'}), 400
@@ -82,11 +76,9 @@ def update_user(current_user):
         user.Address = data['address']
 
     if 'creditcardID' in data:
-        credit_card_regex = r'^\d{16}$'
-        if not re.match(credit_card_regex, data['creditcardID']):
-            return jsonify({
-                'message': 'Invalid credit card number, credit card '
-                           'number must be 16 digit and contain only numbers.'}), 400
+        is_credit_card_valid, credit_card_message = validate_credit_card(data['creditcardID'])
+        if not is_credit_card_valid:
+            return jsonify({'message': credit_card_message}), 400
         user.CreditCardID = data['creditcardID']
 
     db.session.commit()
