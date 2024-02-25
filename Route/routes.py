@@ -21,6 +21,14 @@ def init_routes(app):
     def update_user(current_user):
         return user.update_user(current_user)
 
+    @app.route('/reset_password_request', methods=['POST'])
+    def reset_password_request():
+        return user.reset_password_request()
+
+    @app.route('/reset_password/<token>', methods=['POST'])
+    def reset_password(token):
+        return user.reset_password(token)
+
     @app.route('/products', methods=['GET'])
     def see_products():
         return product.get_products()
