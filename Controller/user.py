@@ -9,7 +9,7 @@ def register_user():
         email = data.get('email')
         address = data.get('address')
 
-        if len(password) < 8 or not re.search("[a-zA-Z]", password) or not re.search("[0-9]", password):
+        if not validate_password(password):
             return jsonify({
                 'message': 'Password must be at least 8 characters long and include at least one '
                            'letter and one number'}), 400
@@ -83,3 +83,48 @@ def update_user(current_user):
 
     db.session.commit()
     return jsonify({'message': 'User updated successfully'}), 200
+
+
+def reset_password_request():
+    data = request.get_json()
+    email = data.get('email')
+
+    user = User.query.filter_by(Email=email).first()
+    if not user:
+        return jsonify({'message': 'E-mail address not found'}), 404
+
+    s = URLSafeTimedSerializer(creates_app().config['SECRET_KEY'])
+    token = s.dumps(email, salt='password-reset-salt')
+
+    reset_url = f'http://localhost:5000/reset_password/{token}'
+
+    send_email(email, 'Reset Your Password', f'Click on the link to reset your password: {reset_url}')
+
+    return jsonify({'message': 'A password reset link has been sent to your email'}), 200
+
+
+def reset_password(token):
+    serializer = URLSafeTimedSerializer(creates_app().config['SECRET_KEY'])
+
+    try:
+        email = serializer.loads(token, salt='password-reset-salt', max_age=3600)
+    except SignatureExpired:
+        return jsonify({'message': 'The password reset link is expired'}), 400
+    except BadSignature:
+        return jsonify({'message': 'Invalid token'}), 400
+
+    data = request.get_json()
+    new_password = data.get('password')
+
+    if not new_password or not validate_password(new_password):
+        return jsonify({'message': 'Password must be at least 8 characters long and include at least one letter and '
+                                   'one number'}), 400
+
+    user = User.query.filter_by(Email=email).first()
+    if user is None:
+        return jsonify({'message': 'User not found'}), 404
+
+    user.Password = generate_password_hash(new_password)
+    db.session.commit()
+
+    return jsonify({'message': 'Your password has been updated successfully'}), 200
