@@ -40,7 +40,7 @@ def login_user():
         token = jwt.encode({
             'user_id': user.UserID,
             'exp': datetime.datetime.now(datetime.timezone.utc) + datetime.timedelta(hours=1)
-        }, creates_app().config['SECRET_KEY'])
+        }, create_app().config['SECRET_KEY'])
 
         return jsonify({'token': token}), 200
 
@@ -93,7 +93,7 @@ def reset_password_request():
     if not user:
         return jsonify({'message': 'E-mail address not found'}), 404
 
-    s = URLSafeTimedSerializer(creates_app().config['SECRET_KEY'])
+    s = URLSafeTimedSerializer(create_app().config['SECRET_KEY'])
     token = s.dumps(email, salt='password-reset-salt')
 
     reset_url = f'http://localhost:5000/reset_password/{token}'
@@ -104,7 +104,7 @@ def reset_password_request():
 
 
 def reset_password(token):
-    serializer = URLSafeTimedSerializer(creates_app().config['SECRET_KEY'])
+    serializer = URLSafeTimedSerializer(create_app().config['SECRET_KEY'])
 
     try:
         email = serializer.loads(token, salt='password-reset-salt', max_age=3600)

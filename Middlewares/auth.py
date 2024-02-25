@@ -2,7 +2,7 @@ from functools import wraps
 from flask import request, jsonify
 import jwt
 from Model.models import User, Admin
-from creates_app import creates_app
+from create_app import create_app
 
 
 def token_required(role=None):
@@ -18,7 +18,7 @@ def token_required(role=None):
                 return jsonify({'message': 'Token is missing!'}), 401
 
             try:
-                data = jwt.decode(token, creates_app().config['SECRET_KEY'], algorithms=["HS256"])
+                data = jwt.decode(token, create_app().config['SECRET_KEY'], algorithms=["HS256"])
             except:
                 return jsonify({'message': 'Token is invalid!'}), 401
 

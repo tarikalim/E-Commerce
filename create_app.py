@@ -3,10 +3,12 @@ from extensions import *
 from config import Config
 
 
-def creates_app():
+def create_app():
     app = Flask(__name__)
     app.config.from_object(Config)
 
+    from Route import routes
+    routes.init_routes(app)
     mail.init_app(app)
     db.init_app(app)
     jwt.init_app(app)
