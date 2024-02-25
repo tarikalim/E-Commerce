@@ -1,8 +1,4 @@
-import datetime
-import jwt
-from flask import jsonify, request
-from creates_app import creates_app
-from Model.models import *
+from Controller.common import *
 
 
 def login_admin():
