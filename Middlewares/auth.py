@@ -1,4 +1,3 @@
-from enum import Enum
 from functools import wraps
 from flask import request, jsonify
 import jwt
@@ -37,11 +36,5 @@ def token_required(role=None):
             return jsonify({'message': 'Invalid role specified!'}), 401
 
         return decorated_function
+
     return decorator
-
-
-def encode_enum(enum_value):
-    if isinstance(enum_value, Enum):
-        return enum_value.name
-    else:
-        return str(enum_value)
