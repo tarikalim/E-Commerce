@@ -1,8 +1,6 @@
 from sqlalchemy import Enum
 import enum
-from flask_sqlalchemy import SQLAlchemy
-
-db = SQLAlchemy()
+from extensions import db
 
 
 class OrderStatus(enum.Enum):
