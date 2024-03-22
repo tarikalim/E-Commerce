@@ -1,7 +1,8 @@
-# development configs for flask app
 import os
+
+
 class Config:
-    SECRET_KEY = os.getenv("SECRET KEY")
+    SECRET_KEY = os.getenv("SECRET_KEY")
     SQLALCHEMY_DATABASE_URI = os.getenv("SQLALCHEMY_DATABASE_URI")
     MAIL_SERVER = os.getenv("MAIL_SERVER")
     MAIL_PORT = os.getenv("MAIL_PORT")
