@@ -4,25 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8657bc40-455b-4e5c-b651-cf79ebb245c5" name="Changes" comment=".">
-      <change afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extensions.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/helper/passwordCheck.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/helper/sendMail.py" afterDir="false" />
+    <list default="true" id="8657bc40-455b-4e5c-b651-cf79ebb245c5" name="Changes" comment="blank lines">
+      <change afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/user/get_user_info.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/user/login_user.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/user/register_user.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/user/reset_password_request.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/user/update_user.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_17_02_2024_18_13_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_17_02_2024_18_13__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_18_02_2024_20_50_[Changes]1/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_18_02_2024_20_50__Changes_1.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controller/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Controller/common.py" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/common.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controller/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/user.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Middlewares/auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/Middlewares/auth.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Middlewares/mailDomainCheck.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Model/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Route/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/Route/routes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/creates_app.py" beforeDir="false" afterPath="$PROJECT_DIR$/creates_app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/helper/validation/creditCardCheck.py" beforeDir="false" afterPath="$PROJECT_DIR$/helper/creditCardCheck.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/helper/validation/mailCheck.py" beforeDir="false" afterPath="$PROJECT_DIR$/helper/mailCheck.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/create_app.py" beforeDir="false" afterPath="$PROJECT_DIR$/create_app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/extensions.py" beforeDir="false" afterPath="$PROJECT_DIR$/extensions.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -35,7 +32,19 @@
       <list>
         <option value="HTML File" />
         <option value="Python Script" />
+        <option value="Dockerfile" />
       </list>
+    </option>
+  </component>
+  <component name="FlaskConsoleOptions" custom-start-script="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))">
+    <envs>
+      <env key="FLASK_APP" value="app" />
+    </envs>
+    <option name="myCustomStartScript" value="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))" />
+    <option name="myEnvs">
+      <map>
+        <entry key="FLASK_APP" value="app" />
+      </map>
     </option>
   </component>
   <component name="Git.Settings">
@@ -55,10 +64,13 @@
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
-        <option name="accountId" value="bf6a6160-50e5-4dbc-bcae-c16ba510a1cd" />
+        <option name="accountId" value="5cd2d5b1-4a82-4eb0-8e45-b065d8de115d" />
         <option name="url" value="https://github.com/tarikalim/E-Commerce.git" />
       </UrlAndAccount>
     </option>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/app.py" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
@@ -74,24 +86,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "Python.app.executor": "Run",
-    "Python.controllers.executor": "Run",
-    "Python.creates_app.executor": "Run",
-    "Python.deneme.executor": "Run",
-    "Python.emailCheck.executor": "Run",
-    "Python.models.executor": "Run",
-    "Python.routes.executor": "Run",
-    "Python.test.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/Tarik/PycharmProjects/E-Commerce/helper"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Python.app.executor&quot;: &quot;Run&quot;,
+    &quot;Python.controllers.executor&quot;: &quot;Run&quot;,
+    &quot;Python.creates_app.executor&quot;: &quot;Run&quot;,
+    &quot;Python.deneme.executor&quot;: &quot;Run&quot;,
+    &quot;Python.emailCheck.executor&quot;: &quot;Run&quot;,
+    &quot;Python.models.executor&quot;: &quot;Run&quot;,
+    &quot;Python.routes.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Tarik/PycharmProjects/E-Commerce&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.flask.configuration.FlaskConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Tarik\PycharmProjects\E-Commerce\helper" />
@@ -99,11 +119,11 @@
       <recent name="C:\Users\Tarik\PycharmProjects\E-Commerce\static" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Tarik\PycharmProjects\E-Commerce" />
+      <recent name="C:\Users\Tarik\PycharmProjects\E-Commerce\Route" />
+      <recent name="C:\Users\Tarik\PycharmProjects\E-Commerce\docs\user" />
       <recent name="C:\Users\Tarik\PycharmProjects\E-Commerce\helper" />
       <recent name="C:\Users\Tarik\PycharmProjects\E-Commerce\helper\validation" />
-      <recent name="C:\Users\Tarik\PycharmProjects\E-Commerce\Controller" />
-      <recent name="C:\Users\Tarik\PycharmProjects\E-Commerce\Route" />
-      <recent name="C:\Users\Tarik\PycharmProjects\E-Commerce\Model" />
     </key>
   </component>
   <component name="RunManager">
@@ -120,6 +140,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/app.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
@@ -141,7 +162,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-5a2391486177-d3b881c8e49f-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-233.13763.11" />
+        <option value="bundled-python-sdk-d68999036c7f-b11f5e8da5ad-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-233.14475.56" />
       </set>
     </attachedChunks>
   </component>
@@ -153,158 +174,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1707646395665</updated>
-    </task>
-    <task id="LOCAL-00008" summary=".">
-      <option name="closed" value="true" />
-      <created>1707660755818</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1707660755818</updated>
-    </task>
-    <task id="LOCAL-00009" summary=".">
-      <option name="closed" value="true" />
-      <created>1707660799934</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1707660799934</updated>
-    </task>
-    <task id="LOCAL-00010" summary="The token system has been added and the relevant endpoints have been updated to work with the token system.">
-      <option name="closed" value="true" />
-      <created>1707814313500</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1707814313500</updated>
-    </task>
-    <task id="LOCAL-00011" summary=".">
-      <option name="closed" value="true" />
-      <created>1707818798354</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1707818798354</updated>
-    </task>
-    <task id="LOCAL-00012" summary="user info endpoint">
-      <option name="closed" value="true" />
-      <created>1707821763883</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1707821763883</updated>
-    </task>
-    <task id="LOCAL-00013" summary="user info endpoint">
-      <option name="closed" value="true" />
-      <created>1707821786636</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1707821786636</updated>
-    </task>
-    <task id="LOCAL-00014" summary="user info endpoint">
-      <option name="closed" value="true" />
-      <created>1707821853471</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1707821853471</updated>
-    </task>
-    <task id="LOCAL-00015" summary="review and filter by category endpoints added and tested.">
-      <option name="closed" value="true" />
-      <created>1707851350738</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1707851350738</updated>
-    </task>
-    <task id="LOCAL-00016" summary=".">
-      <option name="closed" value="true" />
-      <created>1707851358421</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1707851358421</updated>
-    </task>
-    <task id="LOCAL-00017" summary="extra endpoint. users can update their info's.">
-      <option name="closed" value="true" />
-      <created>1707920588761</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1707920588761</updated>
-    </task>
-    <task id="LOCAL-00018" summary="admin table added">
-      <option name="closed" value="true" />
-      <created>1707955181907</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1707955181907</updated>
-    </task>
-    <task id="LOCAL-00019" summary="admin token function added">
-      <option name="closed" value="true" />
-      <created>1707955244667</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1707955244667</updated>
-    </task>
-    <task id="LOCAL-00020" summary="admin login function and related endpoint added and tested">
-      <option name="closed" value="true" />
-      <created>1707955304766</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1707955304766</updated>
-    </task>
-    <task id="LOCAL-00021" summary="create cart, add product to cart. view cart details.">
-      <option name="closed" value="true" />
-      <created>1708029333741</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1708029333741</updated>
-    </task>
-    <task id="LOCAL-00022" summary="related endpoints.">
-      <option name="closed" value="true" />
-      <created>1708029353095</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1708029353095</updated>
-    </task>
-    <task id="LOCAL-00023" summary="modules update for all files.">
-      <option name="closed" value="true" />
-      <created>1708092322361</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1708092322361</updated>
-    </task>
-    <task id="LOCAL-00024" summary="stock check for adding product to chart functionallity.">
-      <option name="closed" value="true" />
-      <created>1708098024863</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1708098024863</updated>
-    </task>
-    <task id="LOCAL-00025" summary=".">
-      <option name="closed" value="true" />
-      <created>1708281282533</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1708281282533</updated>
-    </task>
-    <task id="LOCAL-00026" summary=".">
-      <option name="closed" value="true" />
-      <created>1708281827845</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1708281827845</updated>
+      <workItem from="1710941503936" duration="53000" />
+      <workItem from="1711052838313" duration="1821000" />
+      <workItem from="1711055153375" duration="1061000" />
+      <workItem from="1711094728021" duration="5968000" />
+      <workItem from="1711110110978" duration="1654000" />
+      <workItem from="1711122532934" duration="7977000" />
+      <workItem from="1711203473342" duration="29000" />
+      <workItem from="1711204969031" duration="9000" />
+      <workItem from="1712602988150" duration="1950000" />
     </task>
     <task id="LOCAL-00027" summary=".">
       <option name="closed" value="true" />
@@ -546,23 +424,168 @@
       <option name="project" value="LOCAL" />
       <updated>1708801774075</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="reset password endpoints, using google 2fa.">
+      <option name="closed" value="true" />
+      <created>1708855052896</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1708855052896</updated>
+    </task>
+    <task id="LOCAL-00058" summary="password reset endpoints.">
+      <option name="closed" value="true" />
+      <created>1708855064119</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1708855064119</updated>
+    </task>
+    <task id="LOCAL-00059" summary="function to validate password syntax.">
+      <option name="closed" value="true" />
+      <created>1708855077084</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1708855077084</updated>
+    </task>
+    <task id="LOCAL-00060" summary="function to send a mail to given address.">
+      <option name="closed" value="true" />
+      <created>1708855095753</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1708855095754</updated>
+    </task>
+    <task id="LOCAL-00061" summary="mail req.">
+      <option name="closed" value="true" />
+      <created>1708855110014</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1708855110014</updated>
+    </task>
+    <task id="LOCAL-00062" summary="file format.">
+      <option name="closed" value="true" />
+      <created>1708855125556</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1708855125556</updated>
+    </task>
+    <task id="LOCAL-00063" summary="import format.">
+      <option name="closed" value="true" />
+      <created>1708855139755</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1708855139755</updated>
+    </task>
+    <task id="LOCAL-00064" summary="first commit.">
+      <option name="closed" value="true" />
+      <created>1708855152569</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1708855152569</updated>
+    </task>
+    <task id="LOCAL-00065" summary="file format.">
+      <option name="closed" value="true" />
+      <created>1708855161754</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1708855161754</updated>
+    </task>
+    <task id="LOCAL-00066" summary=".">
+      <option name="closed" value="true" />
+      <created>1708855170383</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1708855170383</updated>
+    </task>
+    <task id="LOCAL-00067" summary="import statements">
+      <option name="closed" value="true" />
+      <created>1708855188706</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1708855188706</updated>
+    </task>
+    <task id="LOCAL-00068" summary="import statements">
+      <option name="closed" value="true" />
+      <created>1708855193866</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1708855193866</updated>
+    </task>
+    <task id="LOCAL-00069" summary="import statements">
+      <option name="closed" value="true" />
+      <created>1708855196754</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1708855196754</updated>
+    </task>
+    <task id="LOCAL-00070" summary="import statements">
+      <option name="closed" value="true" />
+      <created>1708855235335</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1708855235335</updated>
+    </task>
+    <task id="LOCAL-00071" summary="import statements">
+      <option name="closed" value="true" />
+      <created>1708870684531</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1708870684532</updated>
+    </task>
+    <task id="LOCAL-00072" summary="dockerfile">
+      <option name="closed" value="true" />
+      <created>1711056158318</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1711056158318</updated>
+    </task>
+    <task id="LOCAL-00073" summary="import dotenv to pass .env files to app">
+      <option name="closed" value="true" />
+      <created>1711099235656</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1711099235656</updated>
+    </task>
+    <task id="LOCAL-00074" summary="missing requirements added.">
+      <option name="closed" value="true" />
+      <created>1711099251755</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1711099251755</updated>
+    </task>
+    <task id="LOCAL-00075" summary="blank lines">
+      <option name="closed" value="true" />
+      <created>1711099263338</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1711099263338</updated>
+    </task>
+    <option name="localTasksCounter" value="76" />
     <servers />
   </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName=".env" />
+  </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="stock check for adding product to chart functionallity." />
-    <MESSAGE value="create order endpoint" />
-    <MESSAGE value="create order function" />
-    <MESSAGE value="password hashing." />
-    <MESSAGE value="password length change." />
-    <MESSAGE value="frontend by gpt, ı have no idea about frontend" />
-    <MESSAGE value="see review endpoint and func." />
-    <MESSAGE value="module management" />
-    <MESSAGE value="datetime method update." />
-    <MESSAGE value="user order and order details endpoints." />
-    <MESSAGE value="enum encoder for json format." />
-    <MESSAGE value="user order and order details functions." />
-    <MESSAGE value="role system updated to 1 function and endpoints changed." />
     <MESSAGE value="enum vales are using with their string to reduce work load of functions and cancelling an order endpoint function." />
     <MESSAGE value="extra enum value for order status 'cancelled'" />
     <MESSAGE value="cancel order endpoint route." />
@@ -574,7 +597,23 @@
     <MESSAGE value="check the format of mail." />
     <MESSAGE value="check the format of credit card" />
     <MESSAGE value="use helper functions to repeated futures." />
+    <MESSAGE value="reset password endpoints, using google 2fa." />
+    <MESSAGE value="password reset endpoints." />
+    <MESSAGE value="function to validate password syntax." />
+    <MESSAGE value="function to send a mail to given address." />
+    <MESSAGE value="mail req." />
+    <MESSAGE value="import format." />
+    <MESSAGE value="first commit." />
+    <MESSAGE value="file format." />
     <MESSAGE value="." />
-    <option name="LAST_COMMIT_MESSAGE" value="." />
+    <MESSAGE value="import statements" />
+    <MESSAGE value="dockerfile" />
+    <MESSAGE value="import dotenv to pass .env files to app" />
+    <MESSAGE value="missing requirements added." />
+    <MESSAGE value="blank lines" />
+    <option name="LAST_COMMIT_MESSAGE" value="blank lines" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/E_Commerce$app.coverage" NAME="app Coverage Results" MODIFIED="1712603083870" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

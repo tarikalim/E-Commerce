@@ -1,0 +1,43 @@
+tags:
+  - Login
+summary: "User login"
+description: "This endpoint allows users to log into the system."
+operationId: "loginUser"
+consumes:
+  - "application/json"
+produces:
+  - "application/json"
+parameters:
+  - in: "body"
+    name: "body"
+    description: "Username and password of the user"
+    required: true
+    schema:
+      type: "object"
+      required:
+        - username
+        - password
+      properties:
+        username:
+          type: "string"
+          example: "username123"
+        password:
+          type: "string"
+          example: "password123"
+responses:
+  200:
+    description: "Successful login, token returned."
+    schema:
+      type: "object"
+      properties:
+        token:
+          type: "string"
+          example: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1MTYyMzkwMjJ9.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"
+  401:
+    description: "Invalid username or password."
+    schema:
+      type: "object"
+      properties:
+        message:
+          type: "string"
+          example: "Invalid username or password"

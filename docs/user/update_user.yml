@@ -1,0 +1,46 @@
+tags:
+  - Update User
+summary: "Update user information"
+description: "Allows the current authenticated user to update their account information."
+operationId: "updateUser"
+consumes:
+  - "application/json"
+produces:
+  - "application/json"
+parameters:
+  - in: "body"
+    name: "body"
+    description: "User information to be updated."
+    required: true
+    schema:
+      type: "object"
+      properties:
+        username:
+          type: "string"
+          example: "newusername"
+        email:
+          type: "string"
+          example: "newemail@example.com"
+        address:
+          type: "string"
+          example: "123 New Address St, City, Country"
+        creditcardID:
+          type: "string"
+          example: "1234-5678-9012-3456"
+responses:
+  200:
+    description: "User information updated successfully."
+    schema:
+      type: "object"
+      properties:
+        message:
+          type: "string"
+          example: "User updated successfully"
+  400:
+    description: "Invalid input or conflict, such as a username or email that already exists."
+    schema:
+      type: "object"
+      properties:
+        message:
+          type: "string"
+          example: "Username already taken or invalid credit card details"

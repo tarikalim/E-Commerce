@@ -1,0 +1,36 @@
+tags:
+  - Register
+consumes:
+  - application/json
+produces:
+  - application/json
+parameters:
+  - in: body
+    name: body
+    required: true
+    description: Required information for user registration.
+    schema:
+      type: object
+      required:
+        - username
+        - password
+      properties:
+        username:
+          type: string
+          example: johndoe
+        password:
+          type: string
+          example: '12345Abc'
+        email:
+          type: string
+          example: johndoe@example.com
+        address:
+          type: string
+          example: '123 Main St, Anytown, AN'
+responses:
+  201:
+    description: User successfully registered.
+  400:
+    description: Username already exists or invalid input.
+  500:
+    description: Server error.

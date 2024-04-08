@@ -1,0 +1,33 @@
+tags:
+  - User Information
+summary: "Get user information"
+description: "Retrieves detailed information about the current authenticated user."
+operationId: "getUserInfo"
+produces:
+  - "application/json"
+responses:
+  200:
+    description: "Successfully retrieved user information."
+    schema:
+      type: "object"
+      properties:
+        username:
+          type: "string"
+          example: "user123"
+        email:
+          type: "string"
+          example: "user123@example.com"
+        address:
+          type: "string"
+          example: "123 Example St, City, Country"
+        credit card id:
+          type: "string"
+          example: "1234-5678-9012-3456"
+  401:
+    description: "Unauthorized. User not logged in or session expired."
+    schema:
+      type: "object"
+      properties:
+        message:
+          type: "string"
+          example: "Unauthorized access. Please log in."
